@@ -1,0 +1,11 @@
+items:
+  - icon: "solid fa-camera-retro"
+    label: Ipsum lorem accumsan
+  - icon: "solid fa-sync"
+    label: Sed vehicula elementum
+  - icon: "solid fa-cloud"
+    label: Elit fusce consequat
+  - icon: "solid fa-code"
+    label: Lorem nullam tempus
+  - icon: "solid fa-desktop"
+    label: Adipiscing amet sapien

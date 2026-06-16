@@ -1,0 +1,132 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  # ---- Editable pages ----
+  - name: pages
+    label: "Pages"
+    editor:
+      preview: false
+    files:
+      - name: home
+        label: "Home page"
+        file: "index.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "SEO description", name: "description", widget: "text" }
+          - label: "Intro / Hero"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "richtext", hint: "Inline HTML (links, <br />) is allowed here." }
+              - { label: "Primary button label", name: "button_primary_label", widget: "string" }
+              - { label: "Primary button URL", name: "button_primary_url", widget: "string" }
+              - { label: "Secondary button label", name: "button_secondary_label", widget: "string" }
+              - { label: "Secondary button URL", name: "button_secondary_url", widget: "string" }
+              - { label: "Phone image", name: "phone_image", widget: "image" }
+          - label: "Features strip"
+            name: "features"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+          - label: "Call to action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "richtext" }
+              - { label: "Primary button label", name: "button_primary_label", widget: "string" }
+              - { label: "Primary button URL", name: "button_primary_url", widget: "string" }
+              - { label: "Secondary button label", name: "button_secondary_label", widget: "string" }
+              - { label: "Secondary button URL", name: "button_secondary_url", widget: "string" }
+      - name: generic
+        label: "Generic page"
+        file: "generic.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "SEO description", name: "description", widget: "text" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Hero image", name: "hero_image", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  # ---- Site data (_data/*.yml) ----
+  - name: site_data
+    label: "Site data"
+    files:
+      - name: features
+        label: "Feature icons (section one)"
+        file: "_data/features.yml"
+        fields:
+          - label: "Features"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Icon classes", name: "icon", widget: "string", hint: "Font Awesome classes, e.g. solid fa-camera-retro" }
+              - { label: "Label", name: "label", widget: "string" }
+      - name: spotlights
+        label: "Spotlights (section two)"
+        file: "_data/spotlights.yml"
+        fields:
+          - label: "Spotlights"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+      - name: labeled_icons
+        label: "Labeled icons (section two)"
+        file: "_data/labeled_icons.yml"
+        fields:
+          - label: "Icons"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Icon classes", name: "icon", widget: "string", hint: "Font Awesome classes, e.g. solid fa-code" }
+              - { label: "Label", name: "label", widget: "string" }
+      - name: social
+        label: "Social links (footer)"
+        file: "_data/social.yml"
+        fields:
+          - label: "Social links"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Network", name: "network", widget: "string" }
+              - { label: "Icon class", name: "icon", widget: "string", hint: "e.g. fa-twitter" }
+              - { label: "URL", name: "url", widget: "string" }
+
+  # ---- Global site settings (_config.yml) ----
+  # NOTE: Decap rewrites the whole file from the fields below and does NOT
+  # preserve YAML comments. Every key in _config.yml is represented here so
+  # nothing is dropped on save. Leave plugins/exclude alone.
+  - name: settings
+    label: "Site settings"
+    files:
+      - name: config
+        label: "Global settings"
+        file: "_config.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - label: "Author"
+            name: "author"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+          - { label: "Language", name: "lang", widget: "string" }
+          - { label: "Site URL", name: "url", widget: "string" }
+          - { label: "Base URL", name: "baseurl", widget: "string", required: false }
+          - { label: "Default share image", name: "image", widget: "image" }
+          - { label: "Copyright line", name: "copyright", widget: "string" }
+          - { label: "Plugins (build)", name: "plugins", widget: "hidden" }
+          - { label: "Exclude from build", name: "exclude", widget: "hidden" }

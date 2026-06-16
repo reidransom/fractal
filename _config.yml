@@ -1,0 +1,26 @@
+title: Fractal
+tagline: A simple, single page responsive site template
+description: >
+  Fractal by HTML5 UP — a clean, single-page responsive site template
+  with spotlight rows, icon features, and a bold hero header.
+  Converted to Jekyll.
+author:
+  name: Untitled
+  email: user@untitled.tld
+lang: en_US
+
+url: "https://example.com"
+baseurl: ""
+
+image: /assets/images/pic01.jpg
+
+copyright: "Untitled. All rights reserved."
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - README.txt
+  - LICENSE.txt
+  - DEVELOPMENT.md
+  - .gitignore

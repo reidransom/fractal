@@ -1,0 +1,10 @@
+items:
+  - network: Facebook
+    icon: fa-facebook-f
+    url: "#"
+  - network: Twitter
+    icon: fa-twitter
+    url: "#"
+  - network: Instagram
+    icon: fa-instagram
+    url: "#"
