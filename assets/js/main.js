@@ -4,10 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function($) {
-
-	var	$window = $(window),
-		$body = $('body');
+(function() {
 
 	// Breakpoints.
 		breakpoints({
@@ -20,31 +17,37 @@
 		});
 
 	// Play initial animations on page load.
-		$window.on('load', function() {
+		window.addEventListener('load', function() {
 			window.setTimeout(function() {
-				$body.removeClass('is-preload');
+				document.body.classList.remove('is-preload');
 			}, 100);
 		});
 
 	// Mobile?
-		if (browser.mobile)
-			$body.addClass('is-mobile');
-		else {
+		if (browser.mobile) {
+			document.body.classList.add('is-mobile');
+		} else {
 
 			breakpoints.on('>medium', function() {
-				$body.removeClass('is-mobile');
+				document.body.classList.remove('is-mobile');
 			});
 
 			breakpoints.on('<=medium', function() {
-				$body.addClass('is-mobile');
+				document.body.classList.add('is-mobile');
 			});
 
 		}
 
 	// Scrolly.
-		$('.scrolly')
-			.scrolly({
-				speed: 1500
+		document.querySelectorAll('.scrolly').forEach(function(el) {
+			el.addEventListener('click', function(event) {
+				var href = el.getAttribute('href');
+				if (!href || href.charAt(0) !== '#' || href.length < 2) return;
+				var target = document.querySelector(href);
+				if (!target) return;
+				event.preventDefault();
+				target.scrollIntoView({ behavior: 'smooth' });
 			});
+		});
 
-})(jQuery);
+})();
