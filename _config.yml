@@ -12,7 +12,7 @@ lang: en_US
 url: "https://example.com"
 baseurl: ""
 
-image: /assets/images/pic01.jpg
+image: /assets/images/og-image.png
 
 copyright: "Untitled. All rights reserved."
 
