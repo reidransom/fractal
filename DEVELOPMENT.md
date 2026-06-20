@@ -46,8 +46,14 @@ The CMS (`admin/config.yml`) exposes:
 - **Decap doesn't preserve YAML comments.** Saving `_config.yml` (or any data
   file) through the CMS will drop comments and may reorder keys. Values are
   preserved; the build is unaffected.
-- **Icon classes** use Font Awesome syntax without the leading `icon` word,
-  e.g. `solid fa-camera-retro`. The templates prepend `icon` automatically.
+- **Icons are inline SVGs**, not a webfont. Each icon name in a `_data` file
+  (e.g. `camera-retro`, `twitter`) must match an SVG partial in
+  `_includes/icons/<name>.svg`; templates inline it with
+  `{% raw %}{% include icons/{{ item.icon }}.svg %}{% endraw %}`. To add a new
+  icon, drop a `currentColor` SVG into `_includes/icons/` (the
+  [Font Awesome Free](https://fontawesome.com/search?o=r&m=free) SVGs work as-is)
+  and reference it by filename. Bundled icons: `camera-retro`, `sync`, `cloud`,
+  `code`, `desktop`, `facebook-f`, `twitter`, `instagram`.
 
 ## Production / deploying the `/admin/` page
 

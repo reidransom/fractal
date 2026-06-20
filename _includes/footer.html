@@ -1,7 +1,7 @@
 <footer id="footer">
   <ul class="icons">
     {%- for s in site.data.social.items %}
-    <li><a href="{{ s.url }}" class="icon brands {{ s.icon }}"><span class="label">{{ s.network }}</span></a></li>
+    <li><a href="{{ s.url }}" class="icon">{% include icons/{{ s.icon }}.svg %}<span class="label">{{ s.network }}</span></a></li>
     {%- endfor %}
   </ul>
   <p class="copyright">&copy; {{ site.copyright }} Credits: <a href="http://html5up.net">HTML5 UP</a></p>

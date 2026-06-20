@@ -50,7 +50,7 @@ cta:
 				</header>
 				<ul class="icons major">
 					{%- for item in site.data.features.items %}
-					<li><span class="icon {{ item.icon }}"><span class="label">{{ item.label }}</span></span></li>
+					<li><span class="icon">{% include icons/{{ item.icon }}.svg %}<span class="label">{{ item.label }}</span></span></li>
 					{%- endfor %}
 				</ul>
 			</section>
@@ -70,7 +70,7 @@ cta:
 					<section class="special">
 						<ul class="icons labeled">
 							{%- for item in site.data.labeled_icons.items %}
-							<li><span class="icon {{ item.icon }}"><span class="label">{{ item.label }}</span></span></li>
+							<li><span class="icon">{% include icons/{{ item.icon }}.svg %}<span class="label">{{ item.label }}</span></span></li>
 							{%- endfor %}
 						</ul>
 					</section>

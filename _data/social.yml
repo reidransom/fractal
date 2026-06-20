@@ -1,10 +1,10 @@
 items:
   - network: Facebook
-    icon: fa-facebook-f
+    icon: facebook-f
     url: "#"
   - network: Twitter
-    icon: fa-twitter
+    icon: twitter
     url: "#"
   - network: Instagram
-    icon: fa-instagram
+    icon: instagram
     url: "#"

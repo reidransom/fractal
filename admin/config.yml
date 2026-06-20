@@ -66,7 +66,7 @@ collections:
             name: "items"
             widget: "list"
             fields:
-              - { label: "Icon classes", name: "icon", widget: "string", hint: "Font Awesome classes, e.g. solid fa-camera-retro" }
+              - { label: "Icon", name: "icon", widget: "string", hint: "Icon name matching an SVG in _includes/icons/, e.g. camera-retro, sync, cloud" }
               - { label: "Label", name: "label", widget: "string" }
       - name: spotlights
         label: "Spotlights (section two)"
@@ -87,7 +87,7 @@ collections:
             name: "items"
             widget: "list"
             fields:
-              - { label: "Icon classes", name: "icon", widget: "string", hint: "Font Awesome classes, e.g. solid fa-code" }
+              - { label: "Icon", name: "icon", widget: "string", hint: "Icon name matching an SVG in _includes/icons/, e.g. code, desktop, cloud" }
               - { label: "Label", name: "label", widget: "string" }
       - name: social
         label: "Social links (footer)"
@@ -98,7 +98,7 @@ collections:
             widget: "list"
             fields:
               - { label: "Network", name: "network", widget: "string" }
-              - { label: "Icon class", name: "icon", widget: "string", hint: "e.g. fa-twitter" }
+              - { label: "Icon", name: "icon", widget: "string", hint: "Icon name matching an SVG in _includes/icons/, e.g. twitter, facebook-f, instagram" }
               - { label: "URL", name: "url", widget: "string" }
 
   # ---- Global site settings (_config.yml) ----

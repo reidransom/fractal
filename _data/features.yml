@@ -1,7 +1,7 @@
 items:
-  - icon: "solid fa-camera-retro"
+  - icon: camera-retro
     label: Shoot
-  - icon: "solid fa-sync"
+  - icon: sync
     label: Process
-  - icon: "solid fa-cloud"
+  - icon: cloud
     label: Upload
