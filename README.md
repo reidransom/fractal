@@ -1,0 +1,91 @@
+# Fractal by HTML5 UP
+
+[html5up.net](https://html5up.net) | [@ajlkn](https://twitter.com/ajlkn)
+
+Free for personal and commercial use under the CCA 3.0 license ([html5up.net/license](https://html5up.net/license))
+
+> ## Skip the setup
+>
+> Get a **commercial-ready, fully customizable, hosted** version
+> of this template — built and managed for you at **[r2ware.dev](https://r2ware.dev)**.
+
+## Development
+
+This site is built with [jigyll](https://github.com/reidransom/jigyll). To run,
+preview, or build it you only need `jigyll` on your PATH — from the repo root:
+
+```sh
+jigyll serve   # live preview (prints the host/port, e.g. http://localhost:4000/)
+jigyll build   # static build in _site/
+```
+
+That's all that's required for development. Content editing via the CMS below is
+optional.
+
+## Content editing (optional, Decap CMS)
+
+If you prefer editing content in a UI, the site ships with [Decap CMS](https://decapcms.org/) running in
+local backend mode — no hosting, auth, or git remote required. Decap's local
+proxy (decap-server) is talked to by the admin UI only when the site is served
+on localhost; edits are written straight to the working-tree files, which you
+then commit with git.
+
+**Additional requirement:** Node.js (for `npx decap-server`).
+
+To edit content, run these in two terminals from the repo root:
+
+1. Decap local backend proxy (listens on http://localhost:8081):
+
+   ```sh
+   npx decap-server
+   ```
+
+2. The site:
+
+   ```sh
+   jigyll serve
+   ```
+
+Then open the `/admin/` path of the served site, e.g. http://localhost:4000/admin/
+(use whatever host/port `jigyll serve` prints).
+
+**Notes:**
+
+- Do NOT add `admin` to the `exclude:` list in `_config.yml` — that would also
+  remove `/admin/` from `jigyll serve`, which is exactly when you need it.
+  `/admin/` is plain static files (no Node in production); decide whether to
+  strip it from a production deploy at publish time.
+- The `/admin/` content model lives in `admin/config.yml`.
+- See `DEVELOPMENT.md` for the full rundown (what's editable, the `_data` `items:`
+  wrapper, YAML comment caveat, and production/deploy guidance).
+
+For the original HTML5 UP template notes, see below.
+
+## About this template
+
+A simple landing page template for showcasing mobile apps (although it'll definitely work
+for other stuff if you get rid of the phone :) Lightweight, fully responsive, and built on
+HTML5, Sass, and flexbox.
+
+Demo images\* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
+you can use for pretty much whatever.
+
+(\* = not included)
+
+AJ
+aj@lkn.io | [@ajlkn](https://twitter.com/ajlkn)
+
+## Credits
+
+**Demo Images:**
+
+- [Unsplash](https://unsplash.com)
+
+**Icons:**
+
+- [Font Awesome](https://fontawesome.io)
+
+**Other:**
+
+- [jQuery](https://jquery.com)
+- [Responsive Tools](https://github.com/ajlkn/responsive-tools)
