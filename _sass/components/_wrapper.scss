@@ -9,7 +9,7 @@
 	.wrapper {
 		@include padding(4.5em, 0);
 		background-color: _palette(bg);
-		border-bottom: solid (_size(border-width) * 2) lighten(_palette(border), 3);
+		border-bottom: solid (_size(border-width) * 2) #eeeeee; // lighten(_palette(border), 3%) — gojekyll sass lacks lighten()
 
 		> .inner {
 			margin-left: auto;
@@ -18,7 +18,7 @@
 
 			&.alt {
 				> * {
-					border-top: solid (_size(border-width) * 2) lighten(_palette(border), 3);
+					border-top: solid (_size(border-width) * 2) #eeeeee; // lighten(_palette(border), 3%) — gojekyll sass lacks lighten()
 					margin-bottom: 0;
 					margin-top: 3em;
 					padding-top: 3em;

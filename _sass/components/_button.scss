@@ -114,11 +114,11 @@
 					color: _palette(accent1, fg-bold) !important;
 
 					&:hover {
-						background-color: lighten(_palette(accent1, bg), 5);
+						background-color: #5ca3e8; // lighten(_palette(accent1, bg), 5%) — gojekyll sass lacks lighten()
 					}
 
 					&:active {
-						background-color: darken(_palette(accent1, bg), 5);
+						background-color: #3089e2; // darken(_palette(accent1, bg), 5%) — gojekyll sass lacks darken()
 					}
 				}
 			}

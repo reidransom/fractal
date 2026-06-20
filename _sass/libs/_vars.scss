@@ -36,9 +36,9 @@
 
 		accent1: (
 			bg:				#4696e5,
-			fg:				mix(#4696e5, #ffffff, 25%),
+			fg:				#d1e5f9, // mix(#4696e5, #ffffff, 25%) — gojekyll sass lacks mix()
 			fg-bold:		#ffffff,
-			fg-light:		mix(#4696e5, #ffffff, 40%),
+			fg-light:		#b5d5f5, // mix(#4696e5, #ffffff, 40%) — gojekyll sass lacks mix()
 			border:			rgba(255,255,255,0.25),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(255,255,255,0.5),
