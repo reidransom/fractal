@@ -68,6 +68,16 @@
 
 	}
 
+	/* Inline SVG icons in buttons (replaces FontAwesome on Download / Learn More) */
+
+		.button svg {
+			width: 1em;
+			height: 1em;
+			margin-right: 0.5em;
+			vertical-align: -0.125em;
+			fill: currentColor;
+		}
+
 	@mixin color-button($p: null) {
 		input[type="submit"],
 		input[type="reset"],
